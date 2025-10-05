@@ -1,0 +1,165 @@
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+
+    --Grey-500: hsl(234, 12%, 34%);
+    --Grey-400: hsl(212, 6%, 44%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: rgba(239, 233, 233, 0.705);
+}
+
+p {
+    font-size: 15px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.head {
+    max-width: 31rem;
+    margin: 5rem 0 2rem 0;
+}
+
+.head div {
+    font-size: 25px;
+    color: var(--Grey-400);
+}
+
+.head h2 {
+    font-size: 30px;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+
+.head p {
+    padding-bottom: 3rem;
+    font-size: 14px;
+    color: var(--Grey-500);
+}
+
+@media (min-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-areas: "c1" "c2" "c3" "c4";
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        display: grid;
+        grid-template-areas: "c1 c2" "c3 c4";
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .container {
+        display: grid;
+        grid-template-areas: "c1 c2 c3" "c1 c4 c3";
+        gap: 20px;
+        align-items: center;
+    }
+
+}
+
+
+
+
+
+.container .card {
+    background-color: white;
+    padding: 20px;
+    width: 350px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: end;
+    border-top: 5px solid;
+    border-radius: 5px;
+}
+
+.container .card:nth-child(1) {
+    grid-area: c1;
+    border-color: var(--Cyan);
+}
+
+.container .card:nth-child(2) {
+    grid-area: c2;
+    border-color: var(--Red);
+}
+
+.container .card:nth-child(4) {
+    grid-area: c3;
+    border-color: var(--Blue);
+}
+
+.container .card:nth-child(3) {
+    grid-area: c4;
+    border-color: var(--Orange);
+
+}
+
+.container .card .text {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-self: start;
+}
+
+.container .card .text h3 {
+    align-self: start;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
